@@ -1,0 +1,21 @@
+﻿@model LinqToSqlRelationships.Models.AddCarViewModel
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="well">
+            <h3>Adding car for @Model.Person.FirstName @Model.Person.LastName</h3>
+            <form method="POST" action="/home/addcar">
+                <input type="text" name="make" placeholder="Make" class="form-control"/>
+                <br/>
+                <input type="text" name="model" placeholder="Model" class="form-control"/>
+                <br/>
+                <input type="text" name="year" placeholder="Year" class="form-control"/>
+                <br/>
+                <input type="hidden" name="personId" value="@Model.Person.Id"/>
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

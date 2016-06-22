@@ -1,0 +1,57 @@
+﻿@using PersonCars.Data
+@model LinqToSqlRelationships.Models.IndexViewModel
+
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th></th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (Person person in Model.People)
+    {
+        <tr>
+            <td>
+                <button data-person-id="@person.Id" class="btn btn-link view-cars">View Cars</button>
+            </td>
+            <td>@person.FirstName</td>
+            <td>@person.LastName</td>
+            <td>@person.Age</td>
+            <td>
+                <a href="/home/addcar?personid=@person.Id" class="btn btn-primary">Add Car</a>
+            </td>
+        </tr>
+        <tr style="display: none;" id="cars-row-@person.Id">
+            <td colspan="5">
+                <table class="table table-hover table-striped table-bordered">
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                    </tr>
+                    @foreach (Car car in person.Cars)
+                    {
+                        <tr>
+                            <td>@car.Make</td>
+                            <td>@car.Model</td>
+                            <td>@car.Year</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+    }
+</table>
+
+@section scripts
+ {
+    <script>
+        $(function() {
+            $(".view-cars").on('click', function() {
+                var personId = $(this).data('person-id');
+                $("#cars-row-" + personId).toggle();
+            });
+        });
+    </script>    
+}

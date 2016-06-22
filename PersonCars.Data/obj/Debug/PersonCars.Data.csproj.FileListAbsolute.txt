@@ -1,0 +1,6 @@
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\bin\Debug\PersonCars.Data.dll.config
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\bin\Debug\PersonCars.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\bin\Debug\PersonCars.Data.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\obj\Debug\PersonCars.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\obj\Debug\PersonCars.Data.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\LinqToSqlRelationships\PersonCars.Data\obj\Debug\PersonCars.Data.csprojResolveAssemblyReference.cache
